@@ -54,8 +54,9 @@ function displayProjects() {
 
     portfolioGrid.innerHTML = "";
     projects.forEach(project => {
+        // Додаємо клас reveal відразу в шаблон картки
         const projectHTML = `
-            <div class="project-card">
+            <div class="project-card reveal">
                 <div class="project-card__img">
                     <img src="${project.img}" alt="${project.title}">
                 </div>
@@ -67,6 +68,9 @@ function displayProjects() {
         `;
         portfolioGrid.innerHTML += projectHTML;
     });
+    
+    // Після того, як додали картки, треба оновити список елементів для анімації
+    initReveal(); 
 }
 
 /**
@@ -83,7 +87,6 @@ if (contactForm) {
         const emailInput = document.getElementById('email');
         const messageInput = document.getElementById('message');
 
-        // Валідація імені
         if (nameInput.value.trim().length < 2) {
             nameInput.parentElement.classList.add('error');
             isValid = false;
@@ -91,7 +94,6 @@ if (contactForm) {
             nameInput.parentElement.classList.remove('error');
         }
 
-        // Валідація Email
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(emailInput.value)) {
             emailInput.parentElement.classList.add('error');
@@ -100,7 +102,6 @@ if (contactForm) {
             emailInput.parentElement.classList.remove('error');
         }
 
-        // Валідація повідомлення
         if (messageInput.value.trim().length < 5) {
             messageInput.parentElement.classList.add('error');
             isValid = false;
@@ -108,7 +109,6 @@ if (contactForm) {
             messageInput.parentElement.classList.remove('error');
         }
 
-        // Фінальна дія
         if (isValid) {
             alert('Дякуємо, ' + nameInput.value + '! Ваша заявка успішно надіслана.');
             contactForm.reset();
@@ -116,7 +116,25 @@ if (contactForm) {
     });
 }
 
+/**
+ * 4. АНІМАЦІЯ ПОЯВИ ПРИ СКРОЛІ (REVEAL)
+ */
+function initReveal() {
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+}
+
 // Запуск при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', () => {
     displayProjects();
+    initReveal(); // Запускаємо для статичних елементів
 });

@@ -212,3 +212,15 @@ body.no-scroll {
     .nav.active { right: 0; }
     .nav__list { flex-direction: column; gap: 40px; }
 }
+
+/* 10. АНІМАЦІЯ ПОЯВИ (REVEAL) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
