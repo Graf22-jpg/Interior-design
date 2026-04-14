@@ -13,12 +13,16 @@ if (burgerBtn) {
     });
 }
 
+// Закриття меню ТІЛЬКИ при кліку на мобілці
 const navLinks = document.querySelectorAll('.nav__list a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        if (burgerBtn) burgerBtn.classList.remove('active');
-        if (nav) nav.classList.remove('active');
-        body.classList.remove('no-scroll');
+        // Перевіряємо, чи зараз активний мобільний вигляд (бургер видимий)
+        if (window.innerWidth <= 768) {
+            if (burgerBtn) burgerBtn.classList.remove('active');
+            if (nav) nav.classList.remove('active');
+            body.classList.remove('no-scroll');
+        }
     });
 });
 
@@ -26,26 +30,10 @@ navLinks.forEach(link => {
  * 2. ДИНАМІЧНЕ ПОРТФОЛІО
  */
 const projects = [
-    {
-        title: "Скандинавська вітальня",
-        category: "Житловий інтер'єр",
-        img: "img/project1.webp"
-    },
-    {
-        title: "Мінімалістична кухня",
-        category: "Кухні",
-        img: "img/project2.webp"
-    },
-    {
-        title: "Сучасний офіс",
-        category: "Комерційний інтер'єр",
-        img: "img/project3.webp"
-    },
-    {
-        title: "Затишна спальня",
-        category: "Житловий інтер'єр",
-        img: "img/project4.webp"
-    }
+    { title: "Скандинавська вітальня", category: "Житловий інтер'єр", img: "img/project1.webp" },
+    { title: "Мінімалістична кухня", category: "Кухні", img: "img/project2.webp" },
+    { title: "Сучасний офіс", category: "Комерційний інтер'єр", img: "img/project3.webp" },
+    { title: "Затишна спальня", category: "Житловий інтер'єр", img: "img/project4.webp" }
 ];
 
 function displayProjects() {
@@ -54,7 +42,6 @@ function displayProjects() {
 
     portfolioGrid.innerHTML = "";
     projects.forEach(project => {
-        // Додаємо клас reveal відразу в шаблон картки
         const projectHTML = `
             <div class="project-card reveal">
                 <div class="project-card__img">
@@ -68,8 +55,6 @@ function displayProjects() {
         `;
         portfolioGrid.innerHTML += projectHTML;
     });
-    
-    // Після того, як додали картки, треба оновити список елементів для анімації
     initReveal(); 
 }
 
@@ -77,11 +62,9 @@ function displayProjects() {
  * 3. ВАЛІДАЦІЯ ФОРМИ
  */
 const contactForm = document.getElementById('contact-form');
-
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault(); 
-        
         let isValid = true;
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
@@ -90,24 +73,18 @@ if (contactForm) {
         if (nameInput.value.trim().length < 2) {
             nameInput.parentElement.classList.add('error');
             isValid = false;
-        } else {
-            nameInput.parentElement.classList.remove('error');
-        }
+        } else { nameInput.parentElement.classList.remove('error'); }
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(emailInput.value)) {
             emailInput.parentElement.classList.add('error');
             isValid = false;
-        } else {
-            emailInput.parentElement.classList.remove('error');
-        }
+        } else { emailInput.parentElement.classList.remove('error'); }
 
         if (messageInput.value.trim().length < 5) {
             messageInput.parentElement.classList.add('error');
             isValid = false;
-        } else {
-            messageInput.parentElement.classList.remove('error');
-        }
+        } else { messageInput.parentElement.classList.remove('error'); }
 
         if (isValid) {
             alert('Дякуємо, ' + nameInput.value + '! Ваша заявка успішно надіслана.');
@@ -117,11 +94,10 @@ if (contactForm) {
 }
 
 /**
- * 4. АНІМАЦІЯ ПОЯВИ ПРИ СКРОЛІ (REVEAL)
+ * 4. АНІМАЦІЯ ПОЯВИ (REVEAL)
  */
 function initReveal() {
     const revealElements = document.querySelectorAll('.reveal');
-    
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -129,12 +105,10 @@ function initReveal() {
             }
         });
     }, { threshold: 0.15 });
-
     revealElements.forEach(el => revealObserver.observe(el));
 }
 
-// Запуск при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', () => {
     displayProjects();
-    initReveal(); // Запускаємо для статичних елементів
+    initReveal();
 });
