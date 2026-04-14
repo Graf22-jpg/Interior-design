@@ -10,6 +10,11 @@
     --transition: all 0.3s ease;
 }
 
+/* Додаємо плавну прокрутку для всієї сторінки */
+html {
+    scroll-behavior: smooth;
+}
+
 /* 2. БАЗОВІ СКИТАННЯ (RESET) */
 * {
     margin: 0;
