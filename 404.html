@@ -6,9 +6,8 @@
     <title>404 - Сторінку не знайдено | INTERIOR</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Додаткові стилі спеціально для сторінки 404 */
         .error-page {
-            height: calc(100vh - 200px); /* Вираховуємо висоту без хедеру та футеру */
+            height: calc(100vh - 200px);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -16,21 +15,18 @@
             text-align: center;
             padding: 20px;
         }
-
         .error-page h1 {
             font-size: 120px;
             color: var(--accent-color);
             line-height: 1;
             margin-bottom: 10px;
         }
-
         .error-page h2 {
             font-size: 24px;
             text-transform: uppercase;
             margin-bottom: 20px;
             letter-spacing: 1px;
         }
-
         .error-page p {
             max-width: 500px;
             margin-bottom: 30px;
@@ -47,14 +43,18 @@
                 <ul class="nav__list">
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="portfolio.html">Портфоліо</a></li>
+                    <li><a href="index.html#services">Послуги</a></li>
                     <li><a href="contacts.html">Контакти</a></li>
                 </ul>
             </nav>
+            <button class="burger-btn" id="burger-btn">
+                <span></span>
+            </button>
         </div>
     </header>
 
     <main class="container">
-        <section class="error-page">
+        <section class="error-page reveal">
             <h1>404</h1>
             <h2>Упс! Сторінку не знайдено</h2>
             <p>Здається, ви потрапили в порожню кімнату без дизайну. Можливо, посилання застаріло або сторінку було перенесено.</p>
@@ -64,9 +64,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 INTERIOR Design. Всі права захищені.</p>
+            <p>&copy; 2026 Студія дизайну інтер'єру. Всі права захищені.</p>
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
