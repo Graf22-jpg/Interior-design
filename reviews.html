@@ -20,28 +20,30 @@
                     <li><a href="contacts.html">Контакти</a></li>
                 </ul>
             </nav>
-            <button class="burger-btn" id="burger-btn">
+            <button class="burger-btn" id="burger-btn" aria-label="Відкрити меню">
                 <span></span>
             </button>
         </div>
     </header>
 
     <main class="container">
-        <h1 class="section-title reveal" style="margin-top: 50px;">Відгуки наших клієнтів</h1>
-        
-        <div id="reviews-grid" class="services__grid">
-            <div class="service-card reveal">
-                <h3>Олена К.</h3>
-                <p style="color: #ffcc00; margin-bottom: 10px;">★★★★★</p>
-                <p>Неймовірна робота! Студія розробила дизайн для нашої трикімнатної квартири. Все продумано до дрібниць, особливо зонування в дитячій кімнаті.</p>
-            </div>
+        <section class="reviews-list-section">
+            <h1 class="section-title reveal" style="margin-top: 50px;">Відгуки наших клієнтів</h1>
             
-            <div class="service-card reveal">
-                <h3>Максим В.</h3>
-                <p style="color: #ffcc00; margin-bottom: 10px;">★★★★★</p>
-                <p>Замовляв авторський нагляд. Зберегло купу нервів та часу під час ремонту. Результат повністю відповідає 3D-візуалізації.</p>
+            <div id="reviews-grid" class="services__grid">
+                <div class="service-card reveal">
+                    <h3>Олена К.</h3>
+                    <p style="color: #ffcc00; margin-bottom: 10px;">★★★★★</p>
+                    <p>Неймовірна робота! Студія розробила дизайн для нашої трикімнатної квартири. Все продумано до дрібниць, особливо зонування в дитячій кімнаті.</p>
+                </div>
+                
+                <div class="service-card reveal">
+                    <h3>Максим В.</h3>
+                    <p style="color: #ffcc00; margin-bottom: 10px;">★★★★★</p>
+                    <p>Замовляв авторський нагляд. Зберегло купу нервів та часу під час ремонту. Результат повністю відповідає 3D-візуалізації.</p>
+                </div>
             </div>
-        </div>
+        </section>
 
         <section class="contacts reveal" style="margin-top: 50px; margin-bottom: 50px;">
             <h2 class="section-title">Залишити відгук</h2>
@@ -49,14 +51,14 @@
                 <form id="review-form" class="contact-form" novalidate>
                     <div class="form-group">
                         <label for="review-name">Ваше ім'я</label>
-                        <input type="text" id="review-name" placeholder="Введіть ваше ім'я" required>
+                        <input type="text" id="review-name" autocomplete="name" placeholder="Введіть ваше ім'я" required>
                         <span class="error-msg">Ім'я має бути не коротшим за 2 символи</span>
                     </div>
 
                     <div class="form-group">
                         <label for="review-text">Ваш відгук</label>
-                        <textarea id="review-text" placeholder="Поділіться враженнями про нашу роботу..." rows="4" required></textarea>
-                        <span class="error-msg">Будь ласка, напишіть відгук (мін. 10 символів)</span>
+                        <textarea id="review-text" autocomplete="off" placeholder="Поділіться враженнями про нашу роботу..." rows="4" required></textarea>
+                        <span class="error-msg">Будь ласка, напишіть відгук (мін. 10 symbols)</span>
                     </div>
 
                     <button type="submit" class="btn">Опублікувати відгук</button>
