@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгуки | INTERIOR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">INTERIOR</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="portfolio.html">Портфоліо</a></li>
+                    <li><a href="index.html#services">Послуги</a></li>
+                    <li><a href="reviews.html" class="active">Відгуки</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+            <button class="burger-btn" id="burger-btn">
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="section-title reveal" style="margin-top: 50px;">Відгуки наших клієнтів</h1>
+        
+        <div id="reviews-grid" class="services__grid">
+            <div class="service-card reveal">
+                <h3>Олена К.</h3>
+                <p style="color: #ffcc00; margin-bottom: 10px;">★★★★★</p>
+                <p>Неймовірна робота! Студія розробила дизайн для нашої трикімнатної квартири. Все продумано до дрібниць, особливо зонування в дитячій кімнаті.</p>
+            </div>
+            
+            <div class="service-card reveal">
+                <h3>Максим В.</h3>
+                <p style="color: #ffcc00; margin-bottom: 10px;">★★★★★</p>
+                <p>Замовляв авторський нагляд. Зберегло купу нервів та часу під час ремонту. Результат повністю відповідає 3D-візуалізації.</p>
+            </div>
+        </div>
+
+        <section class="contacts reveal" style="margin-top: 50px; margin-bottom: 50px;">
+            <h2 class="section-title">Залишити відгук</h2>
+            <div class="contacts__wrapper">
+                <form id="review-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="review-name">Ваше ім'я</label>
+                        <input type="text" id="review-name" placeholder="Введіть ваше ім'я" required>
+                        <span class="error-msg">Ім'я має бути не коротшим за 2 символи</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review-text">Ваш відгук</label>
+                        <textarea id="review-text" placeholder="Поділіться враженнями про нашу роботу..." rows="4" required></textarea>
+                        <span class="error-msg">Будь ласка, напишіть відгук (мін. 10 символів)</span>
+                    </div>
+
+                    <button type="submit" class="btn">Опублікувати відгук</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Студія дизайну інтер'єру. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,6 +1,3 @@
-/**
- * 1. КЕРУВАННЯ МОБІЛЬНИМ МЕНЮ
- */
 const burgerBtn = document.getElementById('burger-btn');
 const nav = document.querySelector('.nav');
 const body = document.body;
@@ -13,11 +10,9 @@ if (burgerBtn) {
     });
 }
 
-// Закриття меню ТІЛЬКИ при кліку на мобілці
 const navLinks = document.querySelectorAll('.nav__list a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        // Перевіряємо, чи зараз активний мобільний вигляд (бургер видимий)
         if (window.innerWidth <= 768) {
             if (burgerBtn) burgerBtn.classList.remove('active');
             if (nav) nav.classList.remove('active');
@@ -26,9 +21,6 @@ navLinks.forEach(link => {
     });
 });
 
-/**
- * 2. ДИНАМІЧНЕ ПОРТФОЛІО
- */
 const projects = [
     { title: "Скандинавська вітальня", category: "Житловий інтер'єр", img: "img/project1.webp" },
     { title: "Мінімалістична кухня", category: "Кухні", img: "img/project2.webp" },
@@ -55,16 +47,13 @@ function displayProjects() {
         `;
         portfolioGrid.innerHTML += projectHTML;
     });
-    initReveal(); 
+    initReveal();
 }
 
-/**
- * 3. ВАЛІДАЦІЯ ФОРМИ
- */
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault(); 
+        e.preventDefault();
         let isValid = true;
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
@@ -93,9 +82,53 @@ if (contactForm) {
     });
 }
 
-/**
- * 4. АНІМАЦІЯ ПОЯВИ (REVEAL)
- */
+function initReviews() {
+    const reviewForm = document.getElementById('review-form');
+    const reviewsGrid = document.getElementById('reviews-grid');
+
+    if (!reviewForm || !reviewsGrid) return;
+
+    reviewForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nameInput = document.getElementById('review-name');
+        const textInput = document.getElementById('review-text');
+        let isValid = true;
+
+        if (nameInput.value.trim().length < 2) {
+            nameInput.parentElement.classList.add('error');
+            isValid = false;
+        } else {
+            nameInput.parentElement.classList.remove('error');
+        }
+
+        if (textInput.value.trim().length < 10) {
+            textInput.parentElement.classList.add('error');
+            isValid = false;
+        } else {
+            textInput.parentElement.classList.remove('error');
+        }
+
+        if (isValid) {
+            const newCard = document.createElement('div');
+            newCard.className = 'service-card reveal';
+            
+            newCard.innerHTML = `
+                <h3>${nameInput.value.trim()}</h3>
+                <p style="color: #ffcc00; margin-bottom: 10px;">★★★★★</p>
+                <p>${textInput.value.trim()}</p>
+            `;
+            
+            reviewsGrid.insertBefore(newCard, reviewsGrid.firstChild);
+            
+            reviewForm.reset();
+            alert('Дякуємо! Ваш відгук успішно опубліковано.');
+            
+            initReveal();
+        }
+    });
+}
+
 function initReveal() {
     const revealElements = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
@@ -110,5 +143,6 @@ function initReveal() {
 
 document.addEventListener('DOMContentLoaded', () => {
     displayProjects();
+    initReviews();
     initReveal();
 });

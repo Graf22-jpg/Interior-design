@@ -1,4 +1,3 @@
-/* 1. ПІДКЛЮЧЕННЯ ШРИФТІВ ТА ЗМІННИХ */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
 :root {
@@ -10,12 +9,10 @@
     --transition: all 0.3s ease;
 }
 
-/* Додаємо плавну прокрутку для всієї сторінки */
 html {
     scroll-behavior: smooth;
 }
 
-/* 2. БАЗОВІ СКИТАННЯ (RESET) */
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +37,6 @@ body.no-scroll {
     padding: 0 20px;
 }
 
-/* 3. ШАПКА САЙТУ (HEADER) */
 .header {
     padding: 20px 0;
     border-bottom: 1px solid #eee;
@@ -109,7 +105,6 @@ body.no-scroll {
 .burger-btn.active span { opacity: 0; }
 .burger-btn.active::after { transform: rotate(-45deg); bottom: 9px; }
 
-/* 4. HERO СЕКЦІЯ */
 .hero {
     height: 80vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/hero-bg.webp');
@@ -149,7 +144,6 @@ body.no-scroll {
     transform: translateY(-3px);
 }
 
-/* 5. ПОСЛУГИ */
 .services { padding: 100px 0; }
 .section-title { text-align: center; margin-bottom: 50px; text-transform: uppercase; }
 
@@ -172,7 +166,6 @@ body.no-scroll {
     transform: translateY(-10px);
 }
 
-/* 6. ПОРТФОЛІО */
 .portfolio__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -184,7 +177,6 @@ body.no-scroll {
 .project-card__img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
 .project-card:hover img { transform: scale(1.08); }
 
-/* 7. КОНТАКТНА ФОРМА (ОНОВЛЕНО) */
 .contacts__wrapper { max-width: 600px; margin: 0 auto 80px; }
 .contact-form { display: flex; flex-direction: column; gap: 25px; }
 .form-group { display: flex; flex-direction: column; position: relative; }
@@ -196,16 +188,13 @@ body.no-scroll {
     transition: var(--transition);
 }
 
-/* Стилі для помилок (Включаючи textarea) */
 .error-msg { color: var(--error-color); font-size: 0.8rem; margin-top: 5px; display: none; }
-.form-group.error input, 
+.form-group.error input,
 .form-group.error textarea { border-color: var(--error-color); }
 .form-group.error .error-msg { display: block; }
 
-/* 8. ФУТЕР */
 .footer { padding: 40px 0; background: var(--primary-color); color: var(--white); text-align: center; }
 
-/* 9. АДАПТИВНІСТЬ */
 @media (max-width: 768px) {
     .burger-btn { display: block; }
     .nav { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--white); transition: 0.4s; display: flex; justify-content: center; align-items: center; z-index: 1000; }
@@ -213,7 +202,6 @@ body.no-scroll {
     .nav__list { flex-direction: column; gap: 40px; }
 }
 
-/* 10. АНІМАЦІЯ ПОЯВИ (REVEAL) */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
