@@ -22,10 +22,10 @@ navLinks.forEach(link => {
 });
 
 const projects = [
-    { title: "Скандинавська вітальня", category: "Житловий інтер'єр", img: "img/project1.webp" },
-    { title: "Мінімалістична кухня", category: "Кухні", img: "img/project2.webp" },
-    { title: "Сучасний офіс", category: "Комерційний інтер'єр", img: "img/project3.webp" },
-    { title: "Затишна спальня", category: "Житловий інтер'єр", img: "img/project4.webp" }
+    { title: "Скандинавська вітальня", category: "Житловий інтер'єр", img: "assets/img/project1.webp" },
+    { title: "Мінімалістична кухня", category: "Кухні", img: "assets/img/project2.webp" },
+    { title: "Сучасний офіс", category: "Комерційний інтер'єр", img: "assets/img/project3.webp" },
+    { title: "Затишна спальня", category: "Житловий інтер'єр", img: "assets/img/project4.webp" }
 ];
 
 function displayProjects() {
