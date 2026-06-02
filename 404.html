@@ -1,75 +1,70 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Сторінку не знайдено | INTERIOR</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.jpg">
+    <title>404 Page Not Found | INTERIOR</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .error-page {
-            height: calc(100vh - 200px);
+
+        .not-found-container {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            min-height: 60vh;
             text-align: center;
-            padding: 20px;
+            padding: 100px 20px;
         }
-        .error-page h1 {
-            font-size: 120px;
-            color: var(--accent-color);
-            line-height: 1;
-            margin-bottom: 10px;
+        .not-found-container h1 { font-size: 120px; color: #cca464; margin-bottom: 20px; }
+        .not-found-container h2 { font-size: 32px; color: #222; margin-bottom: 20px; }
+        .not-found-container p { color: #777; margin-bottom: 30px; }
+        .btn-home {
+            background: #cca464; color: #fff; padding: 15px 30px;
+            text-decoration: none; border-radius: 4px; transition: 0.3s;
         }
-        .error-page h2 {
-            font-size: 24px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-        .error-page p {
-            max-width: 500px;
-            margin-bottom: 30px;
-            color: #666;
-        }
+        .btn-home:hover { background: #b08d50; }
     </style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">INTERIOR</a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="index.html">Головна</a></li>
-                    <li><a href="portfolio.html">Портфоліо</a></li>
-                    <li><a href="index.html#services">Послуги</a></li>
-                    <li><a href="reviews.html">Відгуки</a></li>
-                    <li><a href="contacts.html">Контакти</a></li>
-                </ul>
-            </nav>
-            <button class="burger-btn" id="burger-btn">
-                <span></span>
-            </button>
-        </div>
-    </header>
-
-    <main class="container">
-        <section class="error-page reveal">
+    <main>
+        <section class="not-found-container">
             <h1>404</h1>
-            <h2>Упс! Сторінку не знайдено</h2>
-            <p>Здається, ви потрапили в порожню кімнату без дизайну. Можливо, посилання застаріло або сторінку було перенесено.</p>
-            <a href="index.html" class="btn">Повернутися на головну</a>
+            <h2>Oops! Page Not Found</h2>
+            <p>Вибачте, але сторінку, яку ви шукаєте, не вдалося знайти.</p>
+            <a href="index.html" class="btn-home">Повернутися на головну</a>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Студія дизайну інтер'єру. Всі права захищені.</p>
+    <footer class="footer" style="background-color: #111; padding: 60px 0; color: #777;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+            <div class="footer-box">
+                <h4 style="color: #fff; margin-bottom: 20px; text-transform: uppercase;">About Us</h4>
+                <p>If you own an Iphone, you've probably already worked out how much fun it is to use it to watch movies-it has that.</p>
+                <p style="font-size: 14px; margin-top: 25px;">Copyright &copy;2026 All rights reserved | This template is made with <i class="fa-solid fa-heart" style="color: #cca464;"></i> by <a href="#" style="color: #cca464; text-decoration: none;">Colorlib</a> and distributed by <a href="#" style="color: #cca464; text-decoration: none;">ThemeWagon</a></p>
+            </div>
+            <div class="footer-box">
+                <h4 style="color: #fff; margin-bottom: 20px; text-transform: uppercase;">Newsletter</h4>
+                <p>Stay update with our latest</p>
+                <form style="display: flex;">
+                    <input type="email" placeholder="Email Address" required style="background: #222; border: none; padding: 10px; color: #fff; width: 100%;">
+                    <button type="submit" style="background: #cca464; border: none; padding: 10px 20px; color: #fff; cursor: pointer;"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+            <div class="footer-box">
+                <h4 style="color: #fff; margin-bottom: 20px; text-transform: uppercase;">Follow Us</h4>
+                <p>Let us be social</p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-solid fa-globe"></i></a>
+                    <a href="#" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-behance"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
