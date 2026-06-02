@@ -131,6 +131,9 @@ body {
     display: flex;
     list-style: none;
     gap: 30px;
+    /* ФІКС: Центрування */
+    justify-content: center;
+    align-items: center;
 }
 
 .nav__list a {
@@ -761,7 +764,21 @@ body {
         z-index: 1000;
     }
     .nav.active { right: 0; }
-    .nav__list { flex-direction: column; gap: 25px; }
+    /* ФІКС: Центрування на мобільних */
+    .nav__list { flex-direction: column; gap: 25px; align-items: center; }
+
+    /* ФІКС: Дропдауни на мобільних */
+    .dropdown .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        border: none;
+        box-shadow: none;
+    }
+    .dropdown.mobile-open .dropdown-menu {
+        display: block;
+    }
 
     .works-grid {
         flex-direction: column;
