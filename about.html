@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | INTERIOR</title>
+    <title>About Us | INTERIOR</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -45,19 +45,6 @@
             visibility: visible;
             transform: translateY(0);
         }
-
-        /* Стилі форми */
-        .contact-input-group { margin-bottom: 25px; position: relative; }
-        .contact-input-group label { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; color: #222; margin-bottom: 8px; }
-        .contact-input-group input, .contact-input-group textarea { width: 100%; padding: 14px 18px; border: 1px solid #e0e0e0; background: #fdfdfd; border-radius: 4px; font-size: 14px; color: #333; outline: none; transition: all 0.3s ease; box-sizing: border-box; }
-        .contact-input-group input:focus, .contact-input-group textarea:focus { border-color: #cca464; background: #fff; }
-        .form-error-msg { display: none; font-size: 12px; color: #d9534f; margin-top: 6px; font-weight: 500; }
-        .form-error-msg.active { display: block; }
-        .contact-input-group.invalid input, .contact-input-group.invalid textarea { border-color: #d9534f; background: #fff8f8; }
-        .contact-info-item { display: flex; align-items: flex-start; margin-bottom: 30px; }
-        .contact-info-item i { font-size: 20px; color: #cca464; margin-right: 20px; margin-top: 4px; width: 25px; text-align: center; }
-        .contact-info-item h5 { font-size: 16px; font-weight: 600; color: #222; margin-bottom: 5px; text-transform: uppercase; }
-        .contact-info-item p { color: #777; font-size: 14px; line-height: 1.5; margin: 0; }
     </style>
 </head>
 <body>
@@ -83,12 +70,14 @@
                 <a href="index.html" class="logo">
                     <span class="logo-icon"></span>Interior
                 </a>
+                
                 <nav class="nav" id="nav-menu">
                     <ul class="nav__list">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="portfolio.html">Projects</a></li>
+                        
                         <li class="dropdown" style="position: relative;">
                             <a href="#">Blog <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
                             <ul class="dropdown-menu">
@@ -103,7 +92,7 @@
                                 <li><a href="reviews.html">Testimonials</a></li>
                             </ul>
                         </li>
-                        <li><a href="contacts.html" class="active" style="color: #cca464;">Contact</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
                     </ul>
                 </nav>
                 <button class="burger-btn" id="burger-btn" aria-label="Toggle navigation">
@@ -117,46 +106,51 @@
         <section class="hero hero--sub">
             <div class="container">
                 <div class="hero__content">
-                    <h1>Contact Us</h1>
+                    <h1>About Us</h1>
                     <div class="breadcrumbs">
                         <a href="index.html">Home</a>
                         <span class="arrow">&rarr;</span>
-                        <span class="current">Contact Us</span>
+                        <span class="current">About Us</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-padding" style="background: #ffffff; padding: 90px 0;">
-            <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px;">
-                <div class="contact-details">
-                    <h2 style="font-size: 28px; font-weight: 600; color: #222; margin-bottom: 15px; text-transform: uppercase;">Get in Touch</h2>
-                    <p style="color: #777; line-height: 1.625; margin-bottom: 40px; font-size: 15px;">Feel free to drop us a line and outline your project needs. Our team of expert designers and architects is always ready to bring your dream interior to life.</p>
-                    <div class="contact-info-item"><i class="fa-solid fa-location-dot"></i><div><h5>Our Office</h5><p>4575 New York Avenue, Suite 100<br>New York, NY 10011</p></div></div>
-                    <div class="contact-info-item"><i class="fa-solid fa-phone"></i><div><h5>Call Us Today</h5><p>+853 012 3654 896<br>+853 012 3654 897</p></div></div>
-                    <div class="contact-info-item"><i class="fa-solid fa-envelope"></i><div><h5>Email Address</h5><p>support@colorlib.com<br>info@interior-studio.com</p></div></div>
+        <section class="section-padding container">
+            <div class="about-overview" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center;">
+                <div class="about-overview__text">
+                    <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 20px; color: #222; text-transform: uppercase;">We Provide the Best Interior Design Solutions</h2>
+                    <p style="color: #777; line-height: 1.625; margin-bottom: 20px;">
+                        Our studio has been transforming living and commercial spaces since 2015. We believe that professional interior design is not just about aesthetics, but about creating harmony, ultimate comfort, and smart functionality in every square meter.
+                    </p>
+                    <p style="color: #777; line-height: 1.625; margin-bottom: 30px;">
+                        Whether it's a cozy residential apartment or a massive corporate office, our team of professional architects approaches each project with a unique creative vision and strict technical precision.
+                    </p>
+                    <a href="services.html" class="btn" style="background: #cca464; color: #fff; padding: 12px 30px; text-decoration: none; display: inline-block; text-transform: uppercase; font-size: 13px; font-weight: 600; letter-spacing: 1px;">Our Services</a>
                 </div>
+                <div class="about-overview__img">
+                    <img src="assets/img/b6.jpg" alt="Our Studio Showcase" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); filter: grayscale(30%);">
+                </div>
+            </div>
+        </section>
 
-                <div class="contact-form-wrapper" style="background: #fafafa; padding: 40px; border-radius: 6px; border: 1px solid #f0f0f0;">
-                    <h3 style="font-size: 22px; font-weight: 600; color: #222; margin-bottom: 30px; text-transform: uppercase; border-bottom: 2px solid #cca464; display: inline-block; padding-bottom: 5px;">Send Message</h3>
-                    <form id="contactForm" novalidate>
-                        <div class="contact-input-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your full name">
-                            <span class="form-error-msg"><i class="fa-solid fa-circle-info"></i> Name must contain at least 2 characters</span>
-                        </div>
-                        <div class="contact-input-group">
-                            <label for="email">Your Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="example@mail.com">
-                            <span class="form-error-msg"><i class="fa-solid fa-circle-info"></i> Please enter a valid email address</span>
-                        </div>
-                        <div class="contact-input-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Describe your project goals..."></textarea>
-                            <span class="form-error-msg"><i class="fa-solid fa-circle-info"></i> Please write at least a few words (min. 5 characters)</span>
-                        </div>
-                        <button type="submit" class="btn" style="background: #cca464; color: #fff; padding: 14px 35px; border: none; text-transform: uppercase; font-size: 13px; font-weight: 600; letter-spacing: 1px; border-radius: 4px; cursor: pointer; display: inline-block; width: 100%;">Send Request</button>
-                    </form>
+        <section class="section-padding" style="background: #cca464; color: #fff; text-align: center;">
+            <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
+                <div class="stat-box">
+                    <h3 style="font-size: 46px; font-weight: 700; margin-bottom: 10px;">250+</h3>
+                    <p style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #f5f5f5;">Projects Completed</p>
+                </div>
+                <div class="stat-box">
+                    <h3 style="font-size: 46px; font-weight: 700; margin-bottom: 10px;">45</h3>
+                    <p style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #f5f5f5;">Professional Designers</p>
+                </div>
+                <div class="stat-box">
+                    <h3 style="font-size: 46px; font-weight: 700; margin-bottom: 10px;">850+</h3>
+                    <p style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #f5f5f5;">Happy Clients</p>
+                </div>
+                <div class="stat-box">
+                    <h3 style="font-size: 46px; font-weight: 700; margin-bottom: 10px;">12</h3>
+                    <p style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #f5f5f5;">International Awards</p>
                 </div>
             </div>
         </section>
@@ -191,5 +185,5 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
-    </body>
+</body>
 </html>

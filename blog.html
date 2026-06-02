@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | INTERIOR</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico.jpg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Стилі випадаючого меню */
+        .dropdown-menu {
+            position: absolute; top: 100%; left: 0; background-color: #ffffff; min-width: 180px;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1); list-style: none; padding: 10px 0;
+            margin: 0; opacity: 0; visibility: hidden; transform: translateY(10px);
+            transition: all 0.3s ease; z-index: 1000; border-top: 2px solid #cca464;
+        }
+        .dropdown-menu li { width: 100%; }
+        .dropdown-menu li a { display: block; padding: 10px 20px !important; color: #222222 !important; font-size: 13px !important; }
+        .dropdown-menu li a:hover { background-color: #fcf9f2; color: #cca464 !important; padding-left: 25px !important; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+
+        /* Стилі для сітки блогу */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .blog-post { border: 1px solid #f0f0f0; border-radius: 4px; overflow: hidden; transition: 0.3s; }
+        .blog-post:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .blog-post img { width: 100%; height: 250px; object-fit: cover; }
+        .blog-content { padding: 25px; }
+        .blog-content h4 { margin-bottom: 15px; color: #222; font-size: 20px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container header__top-wrapper">
+                <div class="header__top-contacts">
+                    <span>+853 012 3654 896</span>
+                    <span class="separator">|</span>
+                    <span>support@colorlib.com</span>
+                </div>
+                <div class="header__top-socials">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__main">
+            <div class="container header__main-wrapper">
+                <a href="index.html" class="logo"><span class="logo-icon"></span>Interior</a>
+                <nav class="nav" id="nav-menu">
+                    <ul class="nav__list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                        
+                        <li class="dropdown" style="position: relative;">
+                            <a href="#" class="active">Blog <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog.html">Blog Grid</a></li>
+                                <li><a href="blog-single.html">Blog Single</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" style="position: relative;">
+                            <a href="#">Pages <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="elementsandfaq.html">Elements & FAQ</a></li>
+                                <li><a href="reviews.html">Testimonials</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--sub">
+            <div class="container">
+                <div class="hero__content">
+                    <h1>Our Blog</h1>
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a>
+                        <span class="arrow">&rarr;</span>
+                        <span class="current">Blog</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container">
+            <div class="blog-grid">
+                <div class="blog-post">
+                    <img src="assets/img/m1.jpg" alt="Blog Image">
+                    <div class="blog-content">
+                        <h4>Modern Interior Trends 2026</h4>
+                        <p style="font-size: 14px; color: #777; margin-bottom: 15px;">Explore the latest styles that will define the upcoming year in interior design and home decor.</p>
+                        <a href="blog-single.html" style="color: #cca464; font-weight: 600;">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="assets/img/m2.jpg" alt="Blog Image">
+                    <div class="blog-content">
+                        <h4>Minimalism in Small Spaces</h4>
+                        <p style="font-size: 14px; color: #777; margin-bottom: 15px;">Tips on how to make your apartment look bigger, cleaner, and much more functional.</p>
+                        <a href="blog-single-minimalism.html" style="color: #cca464; font-weight: 600;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" style="background-color: #111; padding: 80px 0; color: #777;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 50px;">
+            <div class="footer-box">
+                <h4 style="color: #fff; margin-bottom: 25px; font-size: 18px; letter-spacing: 1px;">ABOUT US</h4>
+                <p style="margin-bottom: 25px; line-height: 1.6;">If you own an Iphone, you've probably already worked out how much fun it is to use it to watch movies-it has that.</p>
+                <p style="font-size: 13px;">Copyright &copy;2026 All rights reserved | This template is made with <i class="fa-solid fa-heart" style="color: #cca464;"></i> by <a href="#" style="color: #cca464; text-decoration: none;">Colorlib</a> and distributed by <a href="#" style="color: #cca464; text-decoration: none;">ThemeWagon</a></p>
+            </div>
+            <div class="footer-box">
+                <h4 style="color: #fff; margin-bottom: 25px; font-size: 18px; letter-spacing: 1px;">NEWSLETTER</h4>
+                <p style="margin-bottom: 20px;">Stay update with our latest</p>
+                <form style="display: flex;">
+                    <input type="email" placeholder="Email Address" style="background: #222; border: none; padding: 15px; color: #fff; width: 100%; outline: none;">
+                    <button type="submit" style="background: #cca464; border: none; padding: 15px 20px; color: #fff; cursor: pointer;"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+            <div class="footer-box">
+                <h4 style="color: #fff; margin-bottom: 25px; font-size: 18px; letter-spacing: 1px;">FOLLOW US</h4>
+                <p style="margin-bottom: 20px;">Let us be social</p>
+                <div style="display: flex; gap: 10px;">
+                    <a href="#" style="color: #777; border: 1px solid #333; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" style="color: #777; border: 1px solid #333; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: #777; border: 1px solid #333; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-solid fa-globe"></i></a>
+                    <a href="#" style="color: #777; border: 1px solid #333; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

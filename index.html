@@ -1,66 +1,350 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Студія дизайну інтер'єру - створення затишку та сучасних рішень для вашого дому.">
-    <title>Дизайн інтер'єру | Головна</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.jpg">
+    <meta name="description" content="Interior Design Studio - Precise concept design for stylish living.">
+    <title>Interior Design | Home</title>
+    <link class="favicon" rel="icon" type="image/x-icon" href="assets/img/favicon.ico.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Стилі для випадаючого меню */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 180px;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border-top: 2px solid #cca464;
+        }
+        .dropdown-menu li { width: 100%; }
+        .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px !important;
+            color: #222222 !important;
+            font-size: 13px !important;
+            text-transform: none !important;
+            transition: all 0.2s ease;
+        }
+        .dropdown-menu li a:hover {
+            background-color: #fcf9f2;
+            color: #cca464 !important;
+            padding-left: 25px !important;
+        }
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">INTERIOR</a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="active">Головна</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="#services">Послуги</a></li>
-                    <li><a href="reviews.html">Відгуки</a></li>
-                    <li><a href="contacts.html">Контакти</a></li>
-                </ul>
-            </nav>
-            <button class="burger-btn" id="burger-btn" aria-label="Відкрити меню">
-                <span></span>
-            </button>
+        <div class="header__top">
+            <div class="container header__top-wrapper">
+                <div class="header__top-contacts">
+                    <span>+853 012 3654 896</span>
+                    <span class="separator">|</span>
+                    <span>support@colorlib.com</span>
+                </div>
+                <div class="header__top-socials">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__main">
+            <div class="container header__main-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"></span>Interior
+                </a>
+                <nav class="nav" id="nav-menu">
+                    <ul class="nav__list">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                        <li class="dropdown" style="position: relative;">
+                            <a href="#">Blog <i class="fa-solid fa-angle-down" style="font-size: 10px;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog.html">Blog Grid</a></li>
+                                <li><a href="blog-single.html">Blog Single</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" style="position: relative;">
+                            <a href="#">Pages <i class="fa-solid fa-angle-down" style="font-size: 10px;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="elementsandfaq.html">Elements & FAQ</a></li>
+                                <li><a href="reviews.html">Testimonials</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="burger-btn" id="burger-btn" aria-label="Toggle navigation">
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero__content">
-                <h1>Сучасний дизайн для вашого життя</h1>
-                <p>Створюємо простір, у якому хочеться залишатися.</p>
-                <a href="contacts.html" class="btn">Замовити консультацію</a>
+            <div class="hero__content container">
+                <h1>Precise concept design<br>for stylish living</h1>
+                <p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may be seeing some for as low as $17 each. You may be saying to yourself.</p>
+                <a href="contacts.html" class="btn">GET STARTED</a>
             </div>
         </section>
 
-        <section id="services" class="services container">
-            <h2 class="section-title reveal">Наші послуги</h2>
-            
-            <div class="services__grid">
-                <div class="service-card reveal">
-                    <h3>Планування</h3>
-                    <p>Розробка ергономічних варіантів перепланування вашого простору для максимального комфорту.</p>
+        <section id="services" class="section-padding">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>What we offer to our clients</h2>
+                    <p>Who are in extremely love with eco-friendly system.</p>
                 </div>
-                
-                <div class="service-card reveal">
-                    <h3>3D Візуалізація</h3>
-                    <p>Фотореалістичні зображення майбутнього інтер'єру, щоб ви побачили результат до початку ремонту.</p>
-                </div>
-                
-                <div class="service-card reveal">
-                    <h3>Авторський нагляд</h3>
-                    <p>Повний контроль за реалізацією проекту та відповідністю будівельних робіт кресленням.</p>
+                <div class="services-grid">
+                    <div class="service-box">
+                        <i class="fa-solid fa-house-chimney" style="font-size: 24px; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                        <h3>Interior Design</h3>
+                        <p>Sony laptops are among the most well known laptops on today's market. Sony is a name that over time has established itself.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="fa-solid fa-layer-group" style="font-size: 24px; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                        <h3>Architecture Design</h3>
+                        <p>Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="fa-solid fa-compass-drafting" style="font-size: 24px; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                        <h3>Concept Design</h3>
+                        <p>Can you imagine what we will be downloading in another twenty years? I mean who would have ever thought that.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="fa-solid fa-camera-retro" style="font-size: 24px; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                        <h3>3D Visualization</h3>
+                        <p>High-quality photorealistic 3D renders that help you see every detail of your future interior with customized lighting, textures, and materials long before renovation starts.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="fa-solid fa-map-location-dot" style="font-size: 24px; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                        <h3>Space Planning</h3>
+                        <p>We create smart and highly functional ergonomic layout plans, optimizing every square meter to guarantee maximum comfort and fluid movement within your space.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 24px; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                        <h3>Furniture & Decor Selection</h3>
+                        <p>Full assistance in sourcing the perfect furniture pieces, lightning fixtures, materials, and unique decor items that match your budget and design concept precisely.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section class="section-padding" style="background-color: var(--bg-light);">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Our Recent Works may impress you</h2>
+                    <p>Who are in extremely love with eco-friendly system.</p>
+                </div>
+                <div class="works-grid">
+                    <div class="work-item"><img src="assets/img/p1.webp" alt="Layout Design"></div>
+                    <div class="work-item"><img src="assets/img/p2.webp" alt="Modern Office"></div>
+                    <div class="work-item"><img src="assets/img/p3.webp" alt="Classic Staircase"></div>
+                    <div class="work-item"><img src="assets/img/p4.webp" alt="Luxury Bedroom"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding features-section">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Some Features that Made us Unique</h2>
+                    <p>Who are in extremely love with eco-friendly system.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <h3>Expert Technicians</h3>
+                        <p>Computer users and programmers have become so accustomed to using Windows, even for the changing.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <h3>Professional Service</h3>
+                        <p>Finding the perfect learning tool for Flash is a daunting task to any novice web developer. One can find help.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-headset"></i>
+                        <h3>Great Support</h3>
+                        <p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun and excitement.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-gem"></i>
+                        <h3>Technical Skills</h3>
+                        <p>"The moment you think of buying a web hosting plan, you know one thing – No more choice, which one to choose."</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <h3>Highly Recommended</h3>
+                        <p>Many conventional colleges and universities are now offering online top degree courses, which are the exact same.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <h3>Positive Reviews</h3>
+                        <p>So you have your new digital camera and clicking away to glory anything and everything in sight. Now you want.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding testimonials-section">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Testimonial from our Clients</h2>
+                    <p>Who are in extremely love with eco-friendly system.</p>
+                </div>
+                <div class="testimonials-page active" id="testimonials-p1">
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-avatar"><img src="assets/img/user1.jpg" alt="Mark Alviro Wiens"></div>
+                                <div class="testimonial-info">
+                                    <p class="testimonial-text">Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware.</p>
+                                    <h3 class="testimonial-name">Mark Alviro Wiens</h3>
+                                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-avatar"><img src="assets/img/user2.jpg" alt="Jane Juliet"></div>
+                                <div class="testimonial-info">
+                                    <p class="testimonial-text">Hypnosis quit smoking methods maintain caused quite world over the last two decades. There is a lot of argument pertaining to</p>
+                                    <h3 class="testimonial-name">Jane Juliet</h3>
+                                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-page" id="testimonials-p2">
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-avatar"><img src="assets/img/user3.jpg" alt="John Joe"></div>
+                                <div class="testimonial-info">
+                                    <p class="testimonial-text">Great emotional design and fast communication! The team completely redefined our workspace, making it both cozy and extremely practical.</p>
+                                    <h3 class="testimonial-name">John Joe</h3>
+                                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-avatar"><img src="assets/img/user4.jpg" alt="Alex Smith"></div>
+                                <div class="testimonial-info">
+                                    <p class="testimonial-text">Highly recommended professional services! From initial conceptual plans to the absolute final renders, everything was delivered strictly on schedule.</p>
+                                    <h3 class="testimonial-name">Alex Smith</h3>
+                                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-pagination">
+                    <span class="dot active" data-page="1"></span>
+                    <span class="dot" data-page="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Looking for a quality and affordable interior design?</h2>
+                <p>Inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace.</p>
+                <a href="contacts.html" class="btn">Request Quote Now</a>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Ongoing Exhibitions from the scratch</h2>
+                    <p>Who are in extremely love with eco-friendly system.</p>
+                </div>
+                <div class="exhibitions-grid">
+                    <div class="exhibition-box">
+                        <div class="exhibition-thumb"><img src="assets/img/e1.jpg" alt="Exhibition 1"></div>
+                        <span class="exhibition-meta">14 Jul 2026 | By Admin</span>
+                        <h3>Retro Design Expo</h3>
+                        <p>Many people leading modern busy lives find themselves drift away from classical organic concepts.</p>
+                    </div>
+                    <div class="exhibition-box">
+                        <div class="exhibition-thumb"><img src="assets/img/e2.jpg" alt="Exhibition 2"></div>
+                        <span class="exhibition-meta">18 Aug 2026 | By Admin</span>
+                        <h3>Modern Urban Living</h3>
+                        <p>Computer users and programmers have become so accustomed to sleek digital environments.</p>
+                    </div>
+                    <div class="exhibition-box">
+                        <div class="exhibition-thumb"><img src="assets/img/e3.jpg" alt="Exhibition 3"></div>
+                        <span class="exhibition-meta">22 Sep 2026 | By Admin</span>
+                        <h3>Eco Architecture Focus</h3>
+                        <p>The moment you think of building sustainable structures, you realize nature gives the blueprint.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="brand-section">
+            <div class="container brand-wrapper">
+                <div class="brand-item"><img src="assets/img/b1.png" alt="Vitra"></div>
+                <div class="brand-item"><img src="assets/img/b2.png" alt="HAY"></div>
+                <div class="brand-item"><img src="assets/img/b3.png" alt="BoConcept"></div>
+                <div class="brand-item"><img src="assets/img/b4.png" alt="Muuto"></div>
+                <div class="brand-item"><img src="assets/img/b5.png" alt="Knoll"></div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Студія дизайну інтер'єру. Всі права захищені.</p>
+            <div class="footer-grid">
+                <div class="footer-box about-box">
+                    <h4>About Us</h4>
+                    <p>If you own an Iphone, you've probably already worked out how much fun it is to use it to watch movies-it has that.</p>
+                    <p class="copyright-text">
+                        Copyright &copy;2026 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> and distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                    </p>
+                </div>
+                <div class="footer-box newsletter-box">
+                    <h4>Newsletter</h4>
+                    <p>Stay update with our latest</p>
+                    <form action="#" class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+                <div class="footer-box social-box">
+                    <h4>Follow Us</h4>
+                    <p>Let us be social</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
