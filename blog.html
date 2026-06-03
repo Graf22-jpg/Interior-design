@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-
         .dropdown-menu {
             position: absolute; top: 100%; left: 0; background-color: #ffffff; min-width: 180px;
             box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1); list-style: none; padding: 10px 0;
@@ -16,10 +15,10 @@
             transition: all 0.3s ease; z-index: 1000; border-top: 2px solid #cca464;
         }
         .dropdown-menu li { width: 100%; }
-        .dropdown-menu li a { display: block; padding: 10px 20px !important; color: #222222 !important; font-size: 13px !important; }
+        .dropdown-menu li a { display: block; padding: 10px 20px !important; color: #222222 !important; font-size: 13px !important; text-decoration: none !important; }
         .dropdown-menu li a:hover { background-color: #fcf9f2; color: #cca464 !important; padding-left: 25px !important; }
         .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-
+        
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
         .blog-post { border: 1px solid #f0f0f0; border-radius: 4px; overflow: hidden; transition: 0.3s; }
         .blog-post:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
@@ -38,10 +37,10 @@
                     <span>support@colorlib.com</span>
                 </div>
                 <div class="header__top-socials">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-dribbble"></i></a>
-                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://dribbble.com/" target="_blank"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="https://www.behance.net/" target="_blank"><i class="fa-brands fa-behance"></i></a>
                 </div>
             </div>
         </div>
@@ -49,18 +48,13 @@
         <div class="header__main">
             <div class="container header__main-wrapper">
                 <a href="index.html" class="logo"><span class="logo-icon"></span>Interior</a>
-                
-                <button class="burger-btn" id="burger-btn" aria-label="Toggle navigation">
-                    <span></span>
-                </button>
-
+                <button class="burger-btn" id="burger-btn" aria-label="Toggle navigation"><span></span></button>
                 <nav class="nav" id="nav-menu">
                     <ul class="nav__list">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="portfolio.html">Projects</a></li>
-                        
                         <li class="dropdown" style="position: relative;">
                             <a href="#" class="active">Blog <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
                             <ul class="dropdown-menu">
@@ -103,7 +97,7 @@
                     <div class="blog-content">
                         <h4>Modern Interior Trends 2026</h4>
                         <p style="font-size: 14px; color: #777; margin-bottom: 15px;">Explore the latest styles that will define the upcoming year in interior design and home decor.</p>
-                        <a href="blog-single.html" style="color: #cca464; font-weight: 600;">Read More</a>
+                        <a href="blog-single.html" style="color: #cca464; font-weight: 600; text-decoration: none;">Read More</a>
                     </div>
                 </div>
                 <div class="blog-post">
@@ -111,7 +105,7 @@
                     <div class="blog-content">
                         <h4>Minimalism in Small Spaces</h4>
                         <p style="font-size: 14px; color: #777; margin-bottom: 15px;">Tips on how to make your apartment look bigger, cleaner, and much more functional.</p>
-                        <a href="blog-single-minimalism.html" style="color: #cca464; font-weight: 600;">Read More</a>
+                        <a href="blog-single-minimalism.html" style="color: #cca464; font-weight: 600; text-decoration: none;">Read More</a>
                     </div>
                 </div>
             </div>
@@ -136,14 +130,15 @@
             <div class="footer-box">
                 <h4 style="color: #fff; margin-bottom: 25px; font-size: 18px; letter-spacing: 1px;">FOLLOW US</h4>
                 <p style="margin-bottom: 20px;">Let us be social</p>
-                <div style="display: flex; gap: 10px;">
-                    <a href="#" style="color: #777; border: 1px solid #333; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" style="color: #777; border: 1px solid #333; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" style="color: #777; border: 1px solid #333; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-solid fa-globe"></i></a>
-                    <a href="#" style="color: #777; border: 1px solid #333; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-behance"></i></a>
+                <div class="footer-socials" style="display: flex; gap: 15px;">
+                    <a href="https://www.facebook.com/" target="_blank" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/" target="_blank" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://dribbble.com/" target="_blank" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="https://www.behance.net/" target="_blank" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-behance"></i></a>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

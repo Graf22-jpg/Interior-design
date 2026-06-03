@@ -150,6 +150,18 @@ body {
     color: var(--accent-gold);
 }
 
+/* ДОДАНО ВИПРАВЛЕННЯ ДЛЯ НАВІГАЦІЇ */
+.nav__list li a { 
+    color: #ffffff !important; 
+    text-decoration: none !important; 
+}
+
+.nav__list li a:hover, 
+.nav__list li a.active { 
+    color: #cca464 !important; 
+}
+/* КІНЕЦЬ ВИПРАВЛЕННЯ */
+
 .burger-btn {
     display: none;
     background: none;
@@ -724,6 +736,18 @@ body {
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
+
+/* ДОДАНО ВИПРАВЛЕННЯ ДЛЯ BREADCRUMBS */
+.breadcrumbs a {
+    color: var(--white) !important;
+    text-decoration: none !important;
+    transition: var(--transition);
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-gold) !important;
+}
+/* КІНЕЦЬ ВИПРАВЛЕННЯ */
 
 .page-banner .breadcrumbs {
     font-size: 14px;
