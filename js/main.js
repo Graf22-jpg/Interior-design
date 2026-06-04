@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. ФІКСОВАНА ШАПКА ТА СКРОЛ
     const header = document.querySelector('.header');
     if (header) {
         const handleScroll = () => {
@@ -12,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         handleScroll();
     }
 
+    // 2. БУРГЕР-МЕНЮ ТА МОБІЛЬНА НАВІГАЦІЯ
     const burgerBtn = document.getElementById('burger-btn');
     const navMenu = document.getElementById('nav-menu');
     
@@ -22,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
         });
 
+        // Мобільне випадаюче меню (Dropdown)
         const dropdowns = document.querySelectorAll('.dropdown > a');
         dropdowns.forEach(link => {
             link.addEventListener('click', (e) => {
@@ -33,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        // Закриття меню при кліку на посилання
         const navLinks = document.querySelectorAll('.nav__list > li > a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -44,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 3. СЛАЙДЕР ВІДГУКІВ
     const dots = document.querySelectorAll(".testimonials-pagination .dot");
     const pages = document.querySelectorAll(".testimonials-page");
 
@@ -60,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 4. ВАЛІДАЦІЯ ФОРМИ КОНТАКТІВ ТА МОДАЛЬНЕ ВІКНО
     const contactForm = document.getElementById('contactForm');
     const successModal = document.getElementById('successModal');
     const closeSuccessModal = document.getElementById('closeSuccessModal');
@@ -117,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Закриття модального вікна
     if (closeSuccessModal && successModal) {
         closeSuccessModal.addEventListener('click', () => {
             successModal.classList.remove('active');
@@ -129,14 +137,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 5. ДИНАМІЧНИЙ ВИВІД ПРОЄКТІВ (З масиву)
     const projectsContainer = document.getElementById('dynamic-projects-container');
     
     const projectsData = [
-        { id: 1, image: 'assets/img/p1.webp', alt: 'Project 1' },
-        { id: 2, image: 'assets/img/p2.webp', alt: 'Project 2' },
-        { id: 3, image: 'assets/img/p3.webp', alt: 'Project 3' },
-        { id: 4, image: 'assets/img/p4.webp', alt: 'Project 4' },
-        { id: 5, image: 'assets/img/p5.webp', alt: 'Project 5' }
+        { id: 1, image: 'assets/img/p1.webp', alt: 'Проєкт 1' },
+        { id: 2, image: 'assets/img/p2.webp', alt: 'Проєкт 2' },
+        { id: 3, image: 'assets/img/p3.webp', alt: 'Проєкт 3' },
+        { id: 4, image: 'assets/img/p4.webp', alt: 'Проєкт 4' },
+        { id: 5, image: 'assets/img/p5.webp', alt: 'Проєкт 5' }
     ];
 
     if (projectsContainer) {
