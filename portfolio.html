@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk"> 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | INTERIOR</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico.jpg">
+    <meta name="description" content="Портфоліо наших останніх проєктів дизайну інтер'єру."> 
+    <title>Проєкти | INTERIOR</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png"> 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -51,9 +53,9 @@
         <div class="header__top">
             <div class="container header__top-wrapper">
                 <div class="header__top-contacts">
-                    <span>+853 012 3654 896</span>
+                    <span>+380 99 123 45 67</span>
                     <span class="separator">|</span>
-                    <span>support@colorlib.com</span>
+                    <span>support@interior.ua</span>
                 </div>
                 <div class="header__top-socials">
                     <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
@@ -71,26 +73,26 @@
                 </a>
                 <nav class="nav" id="nav-menu">
                     <ul class="nav__list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html" class="active">Projects</a></li>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="services.html">Послуги</a></li>
+                        <li><a href="portfolio.html" class="active">Проєкти</a></li>
                         
                         <li class="dropdown" style="position: relative;">
-                            <a href="#">Blog <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                            <a href="#">Блог <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="blog.html">Blog Grid</a></li>
-                                <li><a href="blog-single.html">Blog Single</a></li>
+                                <li><a href="blog.html">Сітка блогу</a></li>
+                                <li><a href="blog-single.html">Окремий пост</a></li>
                             </ul>
                         </li>
                         <li class="dropdown" style="position: relative;">
-                            <a href="#">Pages <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                            <a href="#">Сторінки <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="elementsandfaq.html">Elements & FAQ</a></li>
-                                <li><a href="reviews.html">Testimonials</a></li>
+                                <li><a href="elementsandfaq.html">FAQ</a></li>
+                                <li><a href="reviews.html">Відгуки</a></li>
                             </ul>
                         </li>
-                        <li><a href="contacts.html">Contact</a></li>
+                        <li><a href="contacts.html">Контакти</a></li>
                     </ul>
                 </nav>
                 <button class="burger-btn" id="burger-btn" aria-label="Toggle navigation">
@@ -104,11 +106,11 @@
         <section class="hero hero--sub">
             <div class="container">
                 <div class="hero__content">
-                    <h1>Projects</h1>
+                    <h1>Проєкти</h1>
                     <div class="breadcrumbs">
-                        <a href="index.html">Home</a>
+                        <a href="index.html">Головна</a>
                         <span class="arrow">&rarr;</span>
-                        <span class="current">Projects</span>
+                        <span class="current">Проєкти</span>
                     </div>
                 </div>
             </div>
@@ -116,15 +118,15 @@
 
         <section class="section-padding container">
             <div class="section-intro">
-                <h2>Our Recent Works may impress you</h2>
-                <p>Who are in extremely love with eco-friendly system.</p>
+                <h2>Наші останні роботи приємно здивують вас</h2>
+                <p>Ми створюємо затишні та екологічні простори для життя.</p>
             </div>
 
-            <div class="works-grid">
-                <div class="work-item"><img src="assets/img/p1.webp" alt="Project 1"></div>
-                <div class="work-item"><img src="assets/img/p2.webp" alt="Project 2"></div>
-                <div class="work-item"><img src="assets/img/p3.webp" alt="Project 3"></div>
-                <div class="work-item"><img src="assets/img/p4.webp" alt="Project 4"></div>
+            <div class="works-grid" id="dynamic-projects-container">
+                <div class="work-item"><img src="assets/img/p1.webp" alt="Проєкт 1"></div>
+                <div class="work-item"><img src="assets/img/p2.webp" alt="Проєкт 2"></div>
+                <div class="work-item"><img src="assets/img/p3.webp" alt="Проєкт 3"></div>
+                <div class="work-item"><img src="assets/img/p4.webp" alt="Проєкт 4"></div>
             </div>
         </section>
     </main>
@@ -132,21 +134,21 @@
     <footer class="footer" style="background-color: #111; padding: 60px 0; color: #777;">
         <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
             <div class="footer-box">
-                <h4 style="color: #fff; margin-bottom: 20px; text-transform: uppercase;">About Us</h4>
-                <p>If you own an Iphone, you've probably already worked out how much fun it is to use it to watch movies-it has that.</p>
-                <p style="font-size: 14px; margin-top: 25px;">Copyright &copy;2026 All rights reserved | This template is made with <i class="fa-solid fa-heart" style="color: #cca464;"></i> by <a href="#" style="color: #cca464; text-decoration: none;">Colorlib</a> and distributed by <a href="#" style="color: #cca464; text-decoration: none;">ThemeWagon</a></p>
+                <h4 style="color: #fff; margin-bottom: 20px; text-transform: uppercase;">Про нас</h4>
+                <p>Ми — команда професійних дизайнерів, які перетворюють ваші мрії про ідеальний дім у реальність.</p>
+                <p style="font-size: 14px; margin-top: 25px;">Copyright &copy;2026 Всі права захищені | Створено з <i class="fa-solid fa-heart" style="color: #cca464;"></i></p>
             </div>
             <div class="footer-box">
-                <h4 style="color: #fff; margin-bottom: 20px; text-transform: uppercase;">Newsletter</h4>
-                <p>Stay update with our latest</p>
+                <h4 style="color: #fff; margin-bottom: 20px; text-transform: uppercase;">Підписка</h4>
+                <p>Отримуйте останні новини та тренди дизайну</p>
                 <form class="newsletter-form" style="display: flex;">
-                    <input type="email" placeholder="Email Address" required style="background: #222; border: none; padding: 10px; color: #fff; width: 100%;">
+                    <input type="email" placeholder="Ваш Email" required style="background: #222; border: none; padding: 10px; color: #fff; width: 100%;">
                     <button type="submit" style="background: #cca464; border: none; padding: 10px 20px; color: #fff; cursor: pointer;"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </div>
             <div class="footer-box">
-                <h4 style="color: #fff; margin-bottom: 20px; text-transform: uppercase;">Follow Us</h4>
-                <p>Let us be social</p>
+                <h4 style="color: #fff; margin-bottom: 20px; text-transform: uppercase;">Ми в соцмережах</h4>
+                <p>Слідкуйте за нами</p>
                 <div class="footer-socials" style="display: flex; gap: 15px;">
                     <a href="https://www.facebook.com/" target="_blank" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://twitter.com/" target="_blank" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-twitter"></i></a>
@@ -158,5 +160,33 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectsContainer = document.getElementById('dynamic-projects-container');
+            
+            const projectsData = [
+                { id: 1, image: 'assets/img/p1.webp', alt: 'Проєкт 1' },
+                { id: 2, image: 'assets/img/p2.webp', alt: 'Проєкт 2' },
+                { id: 3, image: 'assets/img/p3.webp', alt: 'Проєкт 3' },
+                { id: 4, image: 'assets/img/p4.webp', alt: 'Проєкт 4' }
+            ];
+
+            if (projectsContainer) {
+                projectsContainer.innerHTML = ''; 
+                let projectsHTML = '';
+                
+                projectsData.forEach(project => {
+                    projectsHTML += `
+                        <div class="work-item">
+                            <img src="${project.image}" alt="${project.alt}">
+                        </div>
+                    `;
+                });
+                
+                projectsContainer.innerHTML = projectsHTML;
+            }
+        });
+    </script>
 </body>
 </html>

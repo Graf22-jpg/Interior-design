@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | INTERIOR</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico.jpg">
+    <meta name="description" content="Читайте наш блог про останні тренди, поради та ідеї з дизайну інтер'єру.">
+    <title>Блог | INTERIOR</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -15,7 +17,7 @@
             transition: all 0.3s ease; z-index: 1000; border-top: 2px solid #cca464;
         }
         .dropdown-menu li { width: 100%; }
-        .dropdown-menu li a { display: block; padding: 10px 20px !important; color: #222222 !important; font-size: 13px !important; text-decoration: none !important; }
+        .dropdown-menu li a { display: block; padding: 10px 20px !important; color: #222222 !important; font-size: 13px !important; text-decoration: none !important; text-transform: none !important; }
         .dropdown-menu li a:hover { background-color: #fcf9f2; color: #cca464 !important; padding-left: 25px !important; }
         .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
         
@@ -32,9 +34,9 @@
         <div class="header__top">
             <div class="container header__top-wrapper">
                 <div class="header__top-contacts">
-                    <span>+853 012 3654 896</span>
+                    <span>+380 99 123 45 67</span>
                     <span class="separator">|</span>
-                    <span>support@colorlib.com</span>
+                    <span>support@interior.ua</span>
                 </div>
                 <div class="header__top-socials">
                     <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
@@ -48,30 +50,30 @@
         <div class="header__main">
             <div class="container header__main-wrapper">
                 <a href="index.html" class="logo"><span class="logo-icon"></span>Interior</a>
-                <button class="burger-btn" id="burger-btn" aria-label="Toggle navigation"><span></span></button>
                 <nav class="nav" id="nav-menu">
                     <ul class="nav__list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Projects</a></li>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="services.html">Послуги</a></li>
+                        <li><a href="portfolio.html">Проєкти</a></li>
                         <li class="dropdown" style="position: relative;">
-                            <a href="#" class="active">Blog <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                            <a href="#" class="active">Блог <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="blog.html">Blog Grid</a></li>
-                                <li><a href="blog-single.html">Blog Single</a></li>
+                                <li><a href="blog.html">Сітка блогу</a></li>
+                                <li><a href="blog-single.html">Окремий пост</a></li>
                             </ul>
                         </li>
                         <li class="dropdown" style="position: relative;">
-                            <a href="#">Pages <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
+                            <a href="#">Сторінки <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="elementsandfaq.html">Elements & FAQ</a></li>
-                                <li><a href="reviews.html">Testimonials</a></li>
+                                <li><a href="elementsandfaq.html">FAQ</a></li>
+                                <li><a href="reviews.html">Відгуки</a></li>
                             </ul>
                         </li>
-                        <li><a href="contacts.html">Contact</a></li>
+                        <li><a href="contacts.html">Контакти</a></li>
                     </ul>
                 </nav>
+                <button class="burger-btn" id="burger-btn" aria-label="Toggle navigation"><span></span></button>
             </div>
         </div>
     </header>
@@ -80,11 +82,11 @@
         <section class="hero hero--sub">
             <div class="container">
                 <div class="hero__content">
-                    <h1>Our Blog</h1>
+                    <h1>Наш блог</h1>
                     <div class="breadcrumbs">
-                        <a href="index.html">Home</a>
+                        <a href="index.html">Головна</a>
                         <span class="arrow">&rarr;</span>
-                        <span class="current">Blog</span>
+                        <span class="current">Блог</span>
                     </div>
                 </div>
             </div>
@@ -93,19 +95,19 @@
         <section class="section-padding container">
             <div class="blog-grid">
                 <div class="blog-post">
-                    <img src="assets/img/m1.jpg" alt="Blog Image">
+                    <img src="assets/img/m1.jpg" alt="Зображення блогу">
                     <div class="blog-content">
-                        <h4>Modern Interior Trends 2026</h4>
-                        <p style="font-size: 14px; color: #777; margin-bottom: 15px;">Explore the latest styles that will define the upcoming year in interior design and home decor.</p>
-                        <a href="blog-single.html" style="color: #cca464; font-weight: 600; text-decoration: none;">Read More</a>
+                        <h4>Сучасні тренди інтер'єру 2026</h4>
+                        <p style="font-size: 14px; color: #777; margin-bottom: 15px;">Ознайомтеся з новітніми стилями, які визначатимуть наступний рік у дизайні інтер'єру та декорі дому.</p>
+                        <a href="blog-single.html" style="color: #cca464; font-weight: 600; text-decoration: none;">Читати далі</a>
                     </div>
                 </div>
                 <div class="blog-post">
-                    <img src="assets/img/m2.jpg" alt="Blog Image">
+                    <img src="assets/img/m2.jpg" alt="Зображення блогу">
                     <div class="blog-content">
-                        <h4>Minimalism in Small Spaces</h4>
-                        <p style="font-size: 14px; color: #777; margin-bottom: 15px;">Tips on how to make your apartment look bigger, cleaner, and much more functional.</p>
-                        <a href="blog-single-minimalism.html" style="color: #cca464; font-weight: 600; text-decoration: none;">Read More</a>
+                        <h4>Мінімалізм у невеликих просторах</h4>
+                        <p style="font-size: 14px; color: #777; margin-bottom: 15px;">Поради щодо того, як зробити вашу квартиру візуально більшою, чистішою та набагато функціональнішою.</p>
+                        <a href="blog-single-minimalism.html" style="color: #cca464; font-weight: 600; text-decoration: none;">Читати далі</a>
                     </div>
                 </div>
             </div>
@@ -115,21 +117,21 @@
     <footer class="footer" style="background-color: #111; padding: 80px 0; color: #777;">
         <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 50px;">
             <div class="footer-box">
-                <h4 style="color: #fff; margin-bottom: 25px; font-size: 18px; letter-spacing: 1px;">ABOUT US</h4>
-                <p style="margin-bottom: 25px; line-height: 1.6;">If you own an Iphone, you've probably already worked out how much fun it is to use it to watch movies-it has that.</p>
-                <p style="font-size: 13px;">Copyright &copy;2026 All rights reserved | This template is made with <i class="fa-solid fa-heart" style="color: #cca464;"></i> by <a href="#" style="color: #cca464; text-decoration: none;">Colorlib</a> and distributed by <a href="#" style="color: #cca464; text-decoration: none;">ThemeWagon</a></p>
+                <h4 style="color: #fff; margin-bottom: 25px; font-size: 18px; letter-spacing: 1px;">ПРО НАС</h4>
+                <p style="margin-bottom: 25px; line-height: 1.6;">Ми — команда професійних дизайнерів, які перетворюють ваші мрії про ідеальний дім у реальність.</p>
+                <p style="font-size: 13px;">Copyright &copy;2026 Всі права захищені | Створено з <i class="fa-solid fa-heart" style="color: #cca464;"></i></p>
             </div>
             <div class="footer-box">
-                <h4 style="color: #fff; margin-bottom: 25px; font-size: 18px; letter-spacing: 1px;">NEWSLETTER</h4>
-                <p style="margin-bottom: 20px;">Stay update with our latest</p>
+                <h4 style="color: #fff; margin-bottom: 25px; font-size: 18px; letter-spacing: 1px;">ПІДПИСКА</h4>
+                <p style="margin-bottom: 20px;">Отримуйте останні новини та тренди дизайну</p>
                 <form style="display: flex;">
-                    <input type="email" placeholder="Email Address" style="background: #222; border: none; padding: 15px; color: #fff; width: 100%; outline: none;">
+                    <input type="email" placeholder="Ваш Email" required style="background: #222; border: none; padding: 15px; color: #fff; width: 100%; outline: none;">
                     <button type="submit" style="background: #cca464; border: none; padding: 15px 20px; color: #fff; cursor: pointer;"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </div>
             <div class="footer-box">
-                <h4 style="color: #fff; margin-bottom: 25px; font-size: 18px; letter-spacing: 1px;">FOLLOW US</h4>
-                <p style="margin-bottom: 20px;">Let us be social</p>
+                <h4 style="color: #fff; margin-bottom: 25px; font-size: 18px; letter-spacing: 1px;">МИ В СОЦМЕРЕЖАХ</h4>
+                <p style="margin-bottom: 20px;">Слідкуйте за нами</p>
                 <div class="footer-socials" style="display: flex; gap: 15px;">
                     <a href="https://www.facebook.com/" target="_blank" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://twitter.com/" target="_blank" style="color: #fff; background: #222; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-twitter"></i></a>

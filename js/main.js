@@ -128,4 +128,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    const projectsContainer = document.getElementById('dynamic-projects-container');
+    
+    const projectsData = [
+        { id: 1, image: 'assets/img/p1.webp', alt: 'Project 1' },
+        { id: 2, image: 'assets/img/p2.webp', alt: 'Project 2' },
+        { id: 3, image: 'assets/img/p3.webp', alt: 'Project 3' },
+        { id: 4, image: 'assets/img/p4.webp', alt: 'Project 4' },
+        { id: 5, image: 'assets/img/p5.webp', alt: 'Project 5' }
+    ];
+
+    if (projectsContainer) {
+        projectsContainer.innerHTML = ''; 
+        let projectsHTML = '';
+        
+        projectsData.forEach(project => {
+            projectsHTML += `
+                <div class="work-item">
+                    <img src="${project.image}" alt="${project.alt}">
+                </div>
+            `;
+        });
+        
+        projectsContainer.innerHTML = projectsHTML;
+    }
 });
