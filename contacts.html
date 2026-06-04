@@ -188,6 +188,93 @@
         </div>
     </footer>
 
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content" style="text-align: center; padding: 50px 30px;">
+            <span class="modal-close" id="closeSuccessModal">&times;</span>
+            <i class="fa-regular fa-circle-check" style="font-size: 60px; color: #cca464; margin-bottom: 20px;"></i>
+            <h3 style="margin-bottom: 10px;">Message Sent!</h3>
+            <p style="color: #777; font-size: 15px; margin-bottom: 0;">Thank you for getting in touch. Our team will contact you shortly.</p>
+        </div>
+    </div>
+
     <script src="assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contactForm');
+            const successModal = document.getElementById('successModal');
+            const closeSuccessModal = document.getElementById('closeSuccessModal');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Блокуємо перезавантаження сторінки
+
+                    let isValid = true;
+
+                    // 1. Перевірка імені
+                    const nameInput = document.getElementById('name');
+                    if (nameInput) {
+                        const nameGroup = nameInput.closest('.contact-input-group');
+                        if (nameInput.value.trim().length < 2) {
+                            nameGroup.classList.add('invalid');
+                            nameGroup.querySelector('.form-error-msg').classList.add('active');
+                            isValid = false;
+                        } else {
+                            nameGroup.classList.remove('invalid');
+                            nameGroup.querySelector('.form-error-msg').classList.remove('active');
+                        }
+                    }
+
+                    // 2. Перевірка Email
+                    const emailInput = document.getElementById('email');
+                    if (emailInput) {
+                        const emailGroup = emailInput.closest('.contact-input-group');
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+                        if (!emailRegex.test(emailInput.value.trim())) {
+                            emailGroup.classList.add('invalid');
+                            emailGroup.querySelector('.form-error-msg').classList.add('active');
+                            isValid = false;
+                        } else {
+                            emailGroup.classList.remove('invalid');
+                            emailGroup.querySelector('.form-error-msg').classList.remove('active');
+                        }
+                    }
+
+                    // 3. Перевірка повідомлення
+                    const messageInput = document.getElementById('message');
+                    if (messageInput) {
+                        const messageGroup = messageInput.closest('.contact-input-group');
+                        if (messageInput.value.trim().length < 5) {
+                            messageGroup.classList.add('invalid');
+                            messageGroup.querySelector('.form-error-msg').classList.add('active');
+                            isValid = false;
+                        } else {
+                            messageGroup.classList.remove('invalid');
+                            messageGroup.querySelector('.form-error-msg').classList.remove('active');
+                        }
+                    }
+
+                    // Якщо всі поля правильні - показуємо модальне вікно
+                    if (isValid && successModal) {
+                        successModal.classList.add('active');
+                        contactForm.reset(); 
+                    }
+                });
+            }
+
+            // Закриття модального вікна
+            if (closeSuccessModal && successModal) {
+                closeSuccessModal.addEventListener('click', () => {
+                    successModal.classList.remove('active');
+                });
+                
+                window.addEventListener('click', (e) => {
+                    if (e.target === successModal) {
+                        successModal.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
