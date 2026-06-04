@@ -207,11 +207,10 @@
 
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault(); // Блокуємо перезавантаження сторінки
+                    e.preventDefault();
 
                     let isValid = true;
 
-                    // 1. Перевірка імені
                     const nameInput = document.getElementById('name');
                     if (nameInput) {
                         const nameGroup = nameInput.closest('.contact-input-group');
@@ -225,11 +224,10 @@
                         }
                     }
 
-                    // 2. Перевірка Email
                     const emailInput = document.getElementById('email');
                     if (emailInput) {
                         const emailGroup = emailInput.closest('.contact-input-group');
-                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                         if (!emailRegex.test(emailInput.value.trim())) {
                             emailGroup.classList.add('invalid');
                             emailGroup.querySelector('.form-error-msg').classList.add('active');
@@ -240,7 +238,6 @@
                         }
                     }
 
-                    // 3. Перевірка повідомлення
                     const messageInput = document.getElementById('message');
                     if (messageInput) {
                         const messageGroup = messageInput.closest('.contact-input-group');
@@ -254,15 +251,13 @@
                         }
                     }
 
-                    // Якщо всі поля правильні - показуємо модальне вікно
                     if (isValid && successModal) {
                         successModal.classList.add('active');
-                        contactForm.reset(); 
+                        contactForm.reset();
                     }
                 });
             }
 
-            // Закриття модального вікна
             if (closeSuccessModal && successModal) {
                 closeSuccessModal.addEventListener('click', () => {
                     successModal.classList.remove('active');

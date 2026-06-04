@@ -131,7 +131,6 @@ body {
     display: flex;
     list-style: none;
     gap: 30px;
-    /* ФІКС: Центрування */
     justify-content: center;
     align-items: center;
 }
@@ -150,17 +149,15 @@ body {
     color: var(--accent-gold);
 }
 
-/* ДОДАНО ВИПРАВЛЕННЯ ДЛЯ НАВІГАЦІЇ */
-.nav__list li a { 
-    color: #ffffff !important; 
-    text-decoration: none !important; 
+.nav__list li a {
+    color: #ffffff !important;
+    text-decoration: none !important;
 }
 
-.nav__list li a:hover, 
-.nav__list li a.active { 
-    color: #cca464 !important; 
+.nav__list li a:hover,
+.nav__list li a.active {
+    color: #cca464 !important;
 }
-/* КІНЕЦЬ ВИПРАВЛЕННЯ */
 
 .burger-btn {
     display: none;
@@ -771,9 +768,6 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* =========================================
-   МОДАЛЬНЕ ВІКНО (POPUP)
-========================================= */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -844,7 +838,6 @@ body {
     .nav.active { right: 0; }
     .nav__list { flex-direction: column; gap: 25px; align-items: center; }
 
-    /* Виправлення тексту дропдауну на телефонах */
     .dropdown-menu li a {
         color: #ffffff !important;
         background: transparent !important;
