@@ -5,22 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Читайте наш блог про останні тренди, поради та ідеї з дизайну інтер'єру.">
-    <title>Блог | INTERIOR</title>
+    <title>Сітка блогів | INTERIOR</title>
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .dropdown-menu {
-            position: absolute; top: 100%; left: 0; background-color: #ffffff; min-width: 180px;
-            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1); list-style: none; padding: 10px 0;
-            margin: 0; opacity: 0; visibility: hidden; transform: translateY(10px);
-            transition: all 0.3s ease; z-index: 1000; border-top: 2px solid #cca464;
-        }
-        .dropdown-menu li { width: 100%; }
-        .dropdown-menu li a { display: block; padding: 10px 20px !important; color: #222222 !important; font-size: 13px !important; text-decoration: none !important; text-transform: none !important; }
-        .dropdown-menu li a:hover { background-color: #fcf9f2; color: #cca464 !important; padding-left: 25px !important; }
-        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
         .blog-post { border: 1px solid #f0f0f0; border-radius: 4px; overflow: hidden; transition: 0.3s; }
         .blog-post:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
@@ -50,29 +39,19 @@
         <div class="header__main">
             <div class="container header__main-wrapper">
                 <a href="index.html" class="logo"><span class="logo-icon"></span>Interior</a>
+                
                 <nav class="nav" id="nav-menu">
                     <ul class="nav__list">
                         <li><a href="index.html">Головна</a></li>
                         <li><a href="about.html">Про нас</a></li>
                         <li><a href="services.html">Послуги</a></li>
                         <li><a href="portfolio.html">Проєкти</a></li>
-                        <li class="dropdown" style="position: relative;">
-                            <a href="#" class="active">Блог <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog.html">Сітка блогу</a></li>
-                                <li><a href="blog-single.html">Окремий пост</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown" style="position: relative;">
-                            <a href="#">Сторінки <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="elementsandfaq.html">FAQ</a></li>
-                                <li><a href="reviews.html">Відгуки</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="blog.html" class="active">Сітка блогів</a></li>
+                        <li><a href="elementsandfaq.html">FAQ</a></li>
                         <li><a href="contacts.html">Контакти</a></li>
                     </ul>
                 </nav>
+                
                 <button class="burger-btn" id="burger-btn" aria-label="Toggle navigation"><span></span></button>
             </div>
         </div>
@@ -82,11 +61,11 @@
         <section class="hero hero--sub">
             <div class="container">
                 <div class="hero__content">
-                    <h1>Наш блог</h1>
+                    <h1>Сітка блогів</h1>
                     <div class="breadcrumbs">
                         <a href="index.html">Головна</a>
                         <span class="arrow">&rarr;</span>
-                        <span class="current">Блог</span>
+                        <span class="current">Сітка блогів</span>
                     </div>
                 </div>
             </div>
@@ -99,7 +78,6 @@
                     <div class="blog-content">
                         <h4>Сучасні тренди інтер'єру 2026</h4>
                         <p style="font-size: 14px; color: #777; margin-bottom: 15px;">Ознайомтеся з новітніми стилями, які визначатимуть наступний рік у дизайні інтер'єру та декорі дому.</p>
-                        <a href="blog-single.html" style="color: #cca464; font-weight: 600; text-decoration: none;">Читати далі</a>
                     </div>
                 </div>
                 <div class="blog-post">
@@ -107,7 +85,6 @@
                     <div class="blog-content">
                         <h4>Мінімалізм у невеликих просторах</h4>
                         <p style="font-size: 14px; color: #777; margin-bottom: 15px;">Поради щодо того, як зробити вашу квартиру візуально більшою, чистішою та набагато функціональнішою.</p>
-                        <a href="blog-single-minimalism.html" style="color: #cca464; font-weight: 600; text-decoration: none;">Читати далі</a>
                     </div>
                 </div>
             </div>

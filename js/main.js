@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. ФІКСОВАНА ШАПКА ТА СКРОЛ
     const header = document.querySelector('.header');
     if (header) {
         const handleScroll = () => {
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         handleScroll();
     }
 
-    // 2. БУРГЕР-МЕНЮ ТА МОБІЛЬНА НАВІГАЦІЯ
     const burgerBtn = document.getElementById('burger-btn');
     const navMenu = document.getElementById('nav-menu');
     
@@ -25,23 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
         });
 
-        // Мобільне випадаюче меню (Dropdown)
-        const dropdowns = document.querySelectorAll('.dropdown > a');
-        dropdowns.forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    link.parentElement.classList.toggle('mobile-open');
-                }
-            });
-        });
-
-        // Закриття меню при кліку на посилання
         const navLinks = document.querySelectorAll('.nav__list > li > a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                if (window.innerWidth <= 768) {
                     burgerBtn.classList.remove('active');
                     navMenu.classList.remove('active');
                 }
@@ -49,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. СЛАЙДЕР ВІДГУКІВ
     const dots = document.querySelectorAll(".testimonials-pagination .dot");
     const pages = document.querySelectorAll(".testimonials-page");
 
@@ -58,15 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
             dot.addEventListener("click", function () {
                 dots.forEach(d => d.classList.remove("active"));
                 pages.forEach(p => p.classList.remove("active"));
+                
                 this.classList.add("active");
+                
                 const pageId = `testimonials-p${this.getAttribute("data-page")}`;
                 const targetPage = document.getElementById(pageId);
-                if (targetPage) targetPage.classList.add("active");
+                if (targetPage) {
+                    targetPage.classList.add("active");
+                }
             });
         });
+
+        let currentIndex = 0;
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % dots.length;
+            dots[currentIndex].click();
+        }, 5000);
     }
 
-    // 4. ВАЛІДАЦІЯ ФОРМИ КОНТАКТІВ ТА МОДАЛЬНЕ ВІКНО
     const contactForm = document.getElementById('contactForm');
     const successModal = document.getElementById('successModal');
     const closeSuccessModal = document.getElementById('closeSuccessModal');
@@ -124,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Закриття модального вікна
     if (closeSuccessModal && successModal) {
         closeSuccessModal.addEventListener('click', () => {
             successModal.classList.remove('active');
@@ -137,15 +129,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. ДИНАМІЧНИЙ ВИВІД ПРОЄКТІВ (З масиву)
     const projectsContainer = document.getElementById('dynamic-projects-container');
     
     const projectsData = [
         { id: 1, image: 'assets/img/p1.webp', alt: 'Проєкт 1' },
         { id: 2, image: 'assets/img/p2.webp', alt: 'Проєкт 2' },
         { id: 3, image: 'assets/img/p3.webp', alt: 'Проєкт 3' },
-        { id: 4, image: 'assets/img/p4.webp', alt: 'Проєкт 4' },
-        { id: 5, image: 'assets/img/p5.webp', alt: 'Проєкт 5' }
+        { id: 4, image: 'assets/img/p4.webp', alt: 'Проєкт 4' }
     ];
 
     if (projectsContainer) {

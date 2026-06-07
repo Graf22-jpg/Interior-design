@@ -77,21 +77,8 @@
                         <li><a href="about.html">Про нас</a></li>
                         <li><a href="services.html">Послуги</a></li>
                         <li><a href="portfolio.html" class="active">Проєкти</a></li>
-                        
-                        <li class="dropdown" style="position: relative;">
-                            <a href="#">Блог <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog.html">Сітка блогу</a></li>
-                                <li><a href="blog-single.html">Окремий пост</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown" style="position: relative;">
-                            <a href="#">Сторінки <i class="fa-solid fa-angle-down" style="font-size: 10px; margin-left: 3px;"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="elementsandfaq.html">FAQ</a></li>
-                                <li><a href="reviews.html">Відгуки</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="blog.html">Сітка блогів</a></li>
+                        <li><a href="elementsandfaq.html">FAQ</a></li>
                         <li><a href="contacts.html">Контакти</a></li>
                     </ul>
                 </nav>
@@ -123,11 +110,7 @@
             </div>
 
             <div class="works-grid" id="dynamic-projects-container">
-                <div class="work-item"><img src="assets/img/p1.webp" alt="Проєкт 1"></div>
-                <div class="work-item"><img src="assets/img/p2.webp" alt="Проєкт 2"></div>
-                <div class="work-item"><img src="assets/img/p3.webp" alt="Проєкт 3"></div>
-                <div class="work-item"><img src="assets/img/p4.webp" alt="Проєкт 4"></div>
-            </div>
+                </div>
         </section>
     </main>
 
@@ -160,33 +143,5 @@
     </footer>
 
     <script src="js/main.js?v=2"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const projectsContainer = document.getElementById('dynamic-projects-container');
-            
-            const projectsData = [
-                { id: 1, image: 'assets/img/p1.webp', alt: 'Проєкт 1' },
-                { id: 2, image: 'assets/img/p2.webp', alt: 'Проєкт 2' },
-                { id: 3, image: 'assets/img/p3.webp', alt: 'Проєкт 3' },
-                { id: 4, image: 'assets/img/p4.webp', alt: 'Проєкт 4' }
-            ];
-
-            if (projectsContainer) {
-                projectsContainer.innerHTML = ''; 
-                let projectsHTML = '';
-                
-                projectsData.forEach(project => {
-                    projectsHTML += `
-                        <div class="work-item">
-                            <img src="${project.image}" alt="${project.alt}">
-                        </div>
-                    `;
-                });
-                
-                projectsContainer.innerHTML = projectsHTML;
-            }
-        });
-    </script>
 </body>
 </html>

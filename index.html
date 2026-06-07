@@ -74,22 +74,10 @@
                     <ul class="nav__list">
                         <li><a href="index.html" class="active">Головна</a></li>
                         <li><a href="about.html">Про нас</a></li>
-                        <li><a href="index.html#services">Послуги</a></li>
+                        <li><a href="services.html">Послуги</a></li>
                         <li><a href="portfolio.html">Проєкти</a></li>
-                        <li class="dropdown" style="position: relative;">
-                            <a href="#">Блог <i class="fa-solid fa-angle-down" style="font-size: 10px;"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog.html">Сітка блогу</a></li>
-                                <li><a href="blog-single.html">Окремий пост</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown" style="position: relative;">
-                            <a href="#">Сторінки <i class="fa-solid fa-angle-down" style="font-size: 10px;"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="elementsandfaq.html">FAQ</a></li>
-                                <li><a href="reviews.html">Відгуки</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="blog.html">Сітка блогів</a></li>
+                        <li><a href="elementsandfaq.html">FAQ</a></li>
                         <li><a href="contacts.html">Контакти</a></li>
                     </ul>
                 </nav>
@@ -349,25 +337,5 @@
 
     <script src="js/main.js?v=2"></script>
 
-    <!-- ПРЯМИЙ СКРИПТ ДЛЯ СЛАЙДЕРА ВІДГУКІВ (Щоб обійти кеш браузера) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const dots = document.querySelectorAll(".testimonials-pagination .dot");
-            const pages = document.querySelectorAll(".testimonials-page");
-
-            if (dots.length > 0 && pages.length > 0) {
-                dots.forEach(dot => {
-                    dot.addEventListener("click", function () {
-                        dots.forEach(d => d.classList.remove("active"));
-                        pages.forEach(p => p.classList.remove("active"));
-                        this.classList.add("active");
-                        const pageId = `testimonials-p${this.getAttribute("data-page")}`;
-                        const targetPage = document.getElementById(pageId);
-                        if (targetPage) targetPage.classList.add("active");
-                    });
-                });
-            }
-        });
-    </script>
 </body>
 </html>
